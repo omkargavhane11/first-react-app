@@ -7,11 +7,25 @@
   font-family: sans-serif;
   text-align: center;
   /* background-color:black; */
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
+.addmovieform{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  /* height:15px; */
+  width:300px;
+  margin:20px;
+}
+
+.moviedatadiv{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+}
 
 .maindiv {
   display: flex;
@@ -36,9 +50,7 @@
   margin:5px;
   /* color: white; */
 }
-.maindiv .details p {
-  /* display:overflow-hidden; */
-}
+
 .maindiv .inner-detail{
   display:flex;
   justify-content:space-between;

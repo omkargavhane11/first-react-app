@@ -1,6 +1,8 @@
 import "./App.css";
 import { MovieDetail } from "./MovieDetail";
 import { useState } from "react";
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 
 export default function App() {
@@ -87,16 +89,23 @@ export default function App() {
     <div className="App">
 
       <div className="addmovieform">
-        <input placeholder="Enter a name" onChange={(event) => setName(event.target.value)}></input>
-        <input placeholder="Enter poster url/path" onChange={(event) => setPoster(event.target.value)}></input>
-        <input placeholder="Enter a rating" onChange={(event) => setRating(event.target.value)}></input>
-        <input placeholder="Enter a summary" onChange={(event) => setSummary(event.target.value)}></input>
+      <TextField placeholder="Enter a name" onChange={(event) => setName(event.target.value)}  label="Name" variant="standard" />
+      <TextField placeholder="Enter poster url/path" onChange={(event) => setPoster(event.target.value)}  label="Poster url/path" variant="standard" />
+      <TextField placeholder="Enter a rating" onChange={(event) => setRating(event.target.value)}  label="Rating" variant="standard" />
+      <TextField placeholder="Enter a summary" onChange={(event) => setSummary(event.target.value)}  label="Summary" variant="standard" />
 
-        <button className="add-movie-btn" onClick={() => {
+        {/* <input placeholder="Enter a name" onChange={(event) => setName(event.target.value)}></input> */}
+        {/* <input placeholder="Enter poster url/path" onChange={(event) => setPoster(event.target.value)}></input> */}
+        {/* <input placeholder="Enter a rating" onChange={(event) => setRating(event.target.value)}></input> */}
+        {/* <input placeholder="Enter a summary" onChange={(event) => setSummary(event.target.value)}></input> */}
+
+        
+        <Button variant="contained" onClick={() => {
           // copy the original list and add movie to it
           setMovieData([...MovieData, newMovie])
         }
-        }>Add Movie</button>
+        }>Add Movie</Button>
+
       </div>
 
       <div className="moviedatadiv">

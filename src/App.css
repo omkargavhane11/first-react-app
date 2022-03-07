@@ -5,10 +5,11 @@
 
 .App {
   font-family: sans-serif;
-  text-align: center;
+  /* text-align: center; */
   /* background-color:black; */
   /* display: flex; */
   flex-wrap: wrap;
+  margin-left:20px;
   justify-content: space-around;
 }
 
